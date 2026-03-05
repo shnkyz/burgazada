@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Burgazada</title>
+  <style>
+    body {
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:#f5f1ea;
+      color:#222;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      text-align:center;
+    }
+    h1 {
+      font-size:48px;
+      letter-spacing:2px;
+      margin-bottom:10px;
+    }
+    p {
+      font-size:20px;
+      margin-bottom:40px;
+    }
+    button {
+      padding:14px 28px;
+      font-size:18px;
+      border:none;
+      background:#0f4c5c;
+      color:white;
+      border-radius:6px;
+      cursor:pointer;
+    }
+    button:hover {
+      opacity:0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+<div>
+  <h1>Burgazada</h1>
+  <p>Her şiir biraz acıdan doğar.</p>
+  <button onclick="enter()">Hoş geldiniz</button>
+</div>
+
+<audio id="ocean">
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2b4d6c1e14.mp3?filename=ocean-waves-112906.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function enter(){
+  const audio = document.getElementById("ocean");
+  audio.play();
+  setTimeout(()=>{
+    window.location.href = "siirler.html";
+  },1000);
+}
+</script>
+
+</body>
+</html>
