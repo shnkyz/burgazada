@@ -7,82 +7,54 @@
 
 <style>
 body{
+margin:0;
 font-family:Georgia, serif;
 background:#faf7f2;
-margin:0;
-padding:40px;
 color:#222;
 }
 
-h1{
+header{
 text-align:center;
-margin-bottom:50px;
+padding:40px 20px;
 }
 
-.poem{
-max-width:600px;
-margin:0 auto 60px auto;
-line-height:1.8;
-font-size:20px;
+h1{
+margin:0;
+font-size:36px;
+}
+
+.sub{
+margin-top:8px;
+opacity:0.7;
+}
+
+iframe{
+width:100%;
+height:90vh;
+border:none;
 }
 
 .footer{
 text-align:center;
 font-size:14px;
 opacity:0.6;
-margin-top:80px;
+padding:20px;
 }
 </style>
 </head>
 
 <body>
 
+<header>
 <h1>Burgazada</h1>
+<div class="sub">Her şiir biraz acıdan doğar.</div>
+</header>
 
-<div class="poem">
-Bir ada düşün<br><br>
-kelimeler kıyıya vuruyor<br><br>
-biraz deniz<br>
-biraz sessizlik<br><br>
-ve içinden geçen<br>
-birkaç dize
-</div>
-
-<div class="poem">
-Yan masada iki fincan vardı<br><br>
-biri falına bakılmış<br>
-diğeri kapalıydı<br><br>
-ve kimse yoktu<br>
-uçaklarına binip gitmişlerdi
-</div>
+<iframe src="https://www.notion.so/31af6289f395802bbfd9cc6d16fe7428"></iframe>
 
 <div class="footer">
-Her şiir biraz acıdan doğar.<br>
-Burgazada
+msa
 </div>
 
 </body>
 </html>
-<button id="soundToggle" style="position:fixed;top:16px;right:16px;padding:10px 12px;border:0;border-radius:10px;background:#0f4c5c;color:#fff;cursor:pointer;">
-  🔊
-</button>
-
-<audio id="ocean" loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2b4d6c1e14.mp3?filename=ocean-waves-112906.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-  const audio = document.getElementById("ocean");
-  const btn = document.getElementById("soundToggle");
-
-  // ana sayfadan geldiyse ses açık başlatmayı dene
-  audio.volume = 0.35;
-  audio.play().catch(()=>{});
-
-  let isOn = true;
-  btn.addEventListener("click", () => {
-    if (isOn) { audio.pause(); btn.textContent = "🔇"; }
-    else { audio.play().catch(()=>{}); btn.textContent = "🔊"; }
-    isOn = !isOn;
-  });
-</script>
